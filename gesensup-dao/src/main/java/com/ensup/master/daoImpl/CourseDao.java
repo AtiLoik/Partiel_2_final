@@ -24,7 +24,7 @@ public class CourseDao {
 	 * @param course
 	 * @param id
 	 */
-	public void associateCourse(Course course,int id) {
+	public void associateCourse(String course,int id) {
 		
 		Connection cn = null;
 		Statement st = null;
@@ -34,7 +34,7 @@ public class CourseDao {
 			
 			st = cn.createStatement();
 			
-			String sql = "INSERT INTO ds_users_students (user_id, current_classes_name) VALUES ('"+ id +"', '"+course.getThemeCourse() +"')";
+			String sql = "INSERT INTO studentcourse (idStudent, themeCourse) VALUES ('"+ id +"', '"+course +"')";
 		
 			st.executeUpdate(sql);
 			System.out.println("Cours associé");

@@ -28,7 +28,7 @@
 		<description></description>
 		<servlet-class>servlets.SupprimerEtudiantServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet>
 		<servlet-name>ViewEtudiantServlet</servlet-name>
 		<display-name>ViewEtudiantServlet</display-name>
@@ -47,7 +47,19 @@
 		<description>modifier les infos d'un étudiant</description>
 		<servlet-class>servlets.ModifEtudiantServlet</servlet-class>
 	</servlet>
-	
+	<servlet>
+		<servlet-name>RechercheEtudiantServlet</servlet-name>
+		<display-name>RechercheEtudiantServlet</display-name>
+		<description></description>
+		<servlet-class>servlets.RechercheEtudiantServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>EtudiantCoursServlet</servlet-name>
+		<display-name>EtudiantCoursServlet</display-name>
+		<description></description>
+		<servlet-class>servlets.EtudiantCoursServlet</servlet-class>
+	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>ConnexionServlet</servlet-name>
 		<url-pattern>/ConnexionServlet</url-pattern>
@@ -75,5 +87,13 @@
 	<servlet-mapping>
 		<servlet-name>ModifEtudiantServlet</servlet-name>
 		<url-pattern>/ModifEtudiantServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>RechercheEtudiantServlet</servlet-name>
+		<url-pattern>/RechercheEtudiantServlet</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>EtudiantCoursServlet</servlet-name>
+		<url-pattern>/EtudiantCoursServlet</url-pattern>
 	</servlet-mapping>
 </web-app>

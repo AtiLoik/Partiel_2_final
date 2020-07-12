@@ -12,7 +12,7 @@ import com.ensup.master.metier.Course;
  */
 public interface ICourseDao {
 
-	public void associateCourse(Course course,int id);
+	public void associateCourse(String  course,int id);
 
 	public List<Course> getAllCourses();
 }

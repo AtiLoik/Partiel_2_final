@@ -26,6 +26,7 @@ public class SupprimerEtudiantServlet extends HttpServlet {
 	private StudentService studentService;
 	private CourseService courseService;
 	private RequestDispatcher dispatcher = null;
+	private User user = null;
 
 	/**
 	 * Default constructor.
@@ -69,10 +70,13 @@ public class SupprimerEtudiantServlet extends HttpServlet {
 		studentService.deleteStudent(id);
 
 		dispatcher = request.getRequestDispatcher("etudiant.jsp");
-
+		
+		user = (User) session.getAttribute("user");
 		session.setAttribute("students", lister());
 		session.setAttribute("courses", getAllCourses());
 		session.setAttribute("student", null);
+		
+		
 		session.setAttribute("message", "Suppression effectuée avec succès !!! ");
 		dispatcher.forward(request, response);
 	}
@@ -81,7 +85,9 @@ public class SupprimerEtudiantServlet extends HttpServlet {
 
 		List<Student> students = Collections.emptyList();
 		try {
+			if(user.getProfil().equalsIgnoreCase("D")) {
 			students = studentService.readAllStudent();
+			}
 		} catch (Exception e) {
 
 		}

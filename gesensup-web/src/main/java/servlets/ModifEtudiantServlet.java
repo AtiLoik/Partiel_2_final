@@ -13,6 +13,7 @@ import javax.servlet.http.HttpSession;
 
 import com.ensup.master.metier.Course;
 import com.ensup.master.metier.Student;
+import com.ensup.master.metier.User;
 import com.ensup.master.serviceImpl.CourseService;
 import com.ensup.master.serviceImpl.StudentService;
 
@@ -24,6 +25,7 @@ public class ModifEtudiantServlet extends HttpServlet {
 	private StudentService studentService;
 	private RequestDispatcher dispatcher = null;
 	private CourseService courseService;
+	private User user = null;
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
@@ -59,22 +61,28 @@ public class ModifEtudiantServlet extends HttpServlet {
 
 		HttpSession session = request.getSession();
 		session.setAttribute("student", null);
-
+		user = (User) session.getAttribute("user");
+		
 		studentService.updateStudent(student);
 
 		session.setAttribute("student", null);
-		session.setAttribute("students", lister());
+		session.setAttribute("students", lister(student));
 		session.setAttribute("courses", getAllCourses());
 		
 		dispatcher = request.getRequestDispatcher("etudiant.jsp");
 		dispatcher.forward(request, response);
 	}
 
-	private List<Student> lister() {
+	private List<Student> lister(Student student) {
 
 		List<Student> students = Collections.emptyList();
 		try {
+			
+			if(user.getProfil().equalsIgnoreCase("D")) {
 			students = studentService.readAllStudent();
+			} else {
+				students.add(student);
+			}
 		} catch (Exception e) {
 
 		}

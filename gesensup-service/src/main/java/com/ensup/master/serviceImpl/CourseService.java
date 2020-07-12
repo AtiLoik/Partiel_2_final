@@ -31,7 +31,7 @@ public class CourseService {
 	 * @param course
 	 * @param id
 	 */
-	public void associateCourse(Course course, int id) {
+	public void associateCourse(String course, int id) {
 		dao.associateCourse(course, id);
 	}
 

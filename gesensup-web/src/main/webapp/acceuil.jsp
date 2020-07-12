@@ -1,4 +1,5 @@
 
+        <%@page import="com.ensup.master.metier.User"%>
         
         <!-- Masthead-->
 		<section class="page-section home" id="home">

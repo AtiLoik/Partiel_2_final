@@ -1,7 +1,10 @@
 
+        <%@page import="com.ensup.master.metier.User"%>
+
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
+                                <% User user = (User) session.getAttribute("user");%>
                 
                 <a class="navbar-brand js-scroll-trigger" href="#page-top">GESTION SCOLAIRE</a>
                 
@@ -9,15 +12,32 @@
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
-                
+				<% if(user.getProfil().equalsIgnoreCase("responsable")) { %>
+
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="home.jsp">Home</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="etudiant.jsp">Etudiant</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="cours.jsp">Cours</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="etudiantAjout.jsp">Ajouter un étudiant</a></li>
                         <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.jsp">Déconnexion</a></li>
                     </ul>
                 </div>
+                <% 
+				}
+                %>
+                <% if(user.getProfil().equalsIgnoreCase("directeur")) { %>
+
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="home.jsp">Home</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="cours.jsp">Cours</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="etudiant.jsp">Liste étudiant</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="index.jsp">Déconnexion</a></li>
+                    </ul>
+                </div>
+                <% 
+				}
+                %>
                 
             </div>
         </nav>

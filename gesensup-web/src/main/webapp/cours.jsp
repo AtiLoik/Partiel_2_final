@@ -1,4 +1,6 @@
 <%@page import="com.ensup.master.metier.Course"%>
+<%@page import="com.ensup.master.metier.Student"%>
+
 <%@page import="java.util.List"%>
 <!-- header -->
 <%@include file="header.jsp"%>
@@ -61,6 +63,7 @@
 		</table>
 		<!--Table-->
 	</div>
+	
 
 	<!--Section: Live preview-->
 

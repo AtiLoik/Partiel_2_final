@@ -1,3 +1,5 @@
+<%@page import="java.util.ArrayList"%>
+<%@page import="com.ensup.master.metier.User"%>
 <%@page import="com.ensup.master.metier.Student"%>
 <%@page import="java.util.List"%>
 
@@ -13,8 +15,44 @@
 		<li><a href="etudiantAjout.jsp">Ajout un étudiant</a></li>
 	</ul>
 
+	<form action="RechercheEtudiantServlet" method="post">
+
+		<div class="form-row">
+
+			<div class="col">
+				<div class="md-form md-outline mt-0">
+					<input type="text" id="firstNameR" name="firstNameR"
+						class="form-control"> <label for="firstNameR">First
+						Name</label>
+				</div>
+			</div>
+
+			<div class="col">
+				<div class="md-form md-outline mt-0">
+					<input type="text" id="lastNameR" name="lastNameR"
+						class="form-control"> <label for="lastNameR">Last
+						Name</label>
+				</div>
+			</div>
+
+			<div class="text-center mb-2">
+				<button type="submit" class="btn btn-primary mb-4">Research</button>
+			</div>
+		</div>
+	</form>
+
 	<!-- Masthead Heading-->
-	<h1>Liste des étudiants</h1>
+	<%
+		List<Student> listEtudiant = new ArrayList<Student>();
+
+		if (user.getProfil().equalsIgnoreCase("D")) {
+			listEtudiant = (List<Student>) session.getAttribute("students");
+		%>
+		<h1>Liste des étudiants</h1>
+		<%} else {	%>
+		<h1>Informations sur un étudiant</h1>
+		<%} %>
+	
 
 	<div class="table-responsive text-nowrap">
 		<!--Table-->
@@ -40,15 +78,11 @@
 			<!--Table body-->
 			<tbody>
 				<%
-					List<Student> listEtudiant = (List<Student>) session.getAttribute("students");
-				%>
-				<%
 					int i = 0;
+
+				for (Student student : listEtudiant) {
 				%>
-				<%
-					for (Student student : listEtudiant) {
-				%>
-			
+
 				<tr>
 					<td><%=student.getId()%></td>
 					<td><%=student.getFirstName()%></td>
@@ -67,7 +101,8 @@
 								
 								<a href="ViewEtudiantServlet?id=<%=student.getId()%>" style="color:blue">View</a>
 								
-								<a href="ViewEtudiantServlet?id=<%=student.getId()%>" style="color:blue">Cours</a>
+								<a href="EtudiantCoursServlet?id=<%=student.getId()%>" style="color:blue">Cours</a>
+								
 							
 							</li>
 						</ul>
@@ -94,6 +129,6 @@
 
 <!-- footer -->
 <script>
-
+	
 </script>
 <%@include file="footer.jsp"%>

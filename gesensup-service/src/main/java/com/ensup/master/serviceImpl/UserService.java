@@ -15,8 +15,8 @@ public class UserService {
 	IUserDao idao;
 	UserDao dao;
 	
-	public UserService(IUserDao idao) {
-		this.idao = idao;
+	public UserService(UserDao dao) {
+		this.dao = dao;
 	}
 
 	public UserService() {

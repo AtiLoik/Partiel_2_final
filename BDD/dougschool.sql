@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  jeu. 09 juil. 2020 à 17:18
+-- Généré le :  Dim 12 juil. 2020 à 17:55
 -- Version du serveur :  10.4.10-MariaDB
 -- Version de PHP :  7.3.12
 
@@ -51,21 +51,23 @@ INSERT INTO `course` (`themeCourse`, `numberHours`) VALUES
 
 DROP TABLE IF EXISTS `person`;
 CREATE TABLE IF NOT EXISTS `person` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `firstName` varchar(50) NOT NULL,
   `lastName` varchar(50) NOT NULL,
   `mailAdresse` varchar(50) NOT NULL,
   `adress` varchar(50) NOT NULL,
   `numberPhone` varchar(50) NOT NULL,
-  `dateOfBirth` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+  `dateOfBirth` varchar(15) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `person`
 --
 
 INSERT INTO `person` (`id`, `firstName`, `lastName`, `mailAdresse`, `adress`, `numberPhone`, `dateOfBirth`) VALUES
-(1, 'Fatima', 'Bamba', 'bamba@yahoo.fr', '6 rue des techno', '01 05 88 99 65', '2000-07-01');
+(1, 'Fatima', 'Bamba', 'bamba@yahoo.fr', '6 rue des technos de simon', '01 05 88 99 65', 'Bamba'),
+(2, 'toto', 'tata', 'toto@gmail.com', 'paris deschamps', '01 25 48 79 63', 'tata');
 
 -- --------------------------------------------------------
 
@@ -101,8 +103,8 @@ CREATE TABLE IF NOT EXISTS `user` (
 --
 
 INSERT INTO `user` (`id`, `login`, `password`, `profil`) VALUES
-(1, 'admin', 'admin', 'admin'),
-(2, 'de', 'de', 'de');
+(1, 'admin', 'admin', 'D'),
+(2, 'de', 'de', 'R');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

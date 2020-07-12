@@ -70,8 +70,17 @@ public class StudentService {
 	 * @param email
 	 * @return
 	 */
-	public Student getUser(String email) {
-		
-		return dao.getUser(email);
+	public Student getStudentByEmail(String email) {
+		return dao.getStudentByEmail(email);
+	}
+	
+	/**
+	 * Research a student
+	 * @param firstName
+	 * @param lastName
+	 * @return
+	 */
+	public List<Student> getStudentByResearch(String firstName, String lastName){
+		return dao.getStudentByResearch(firstName, lastName);
 	}
 }

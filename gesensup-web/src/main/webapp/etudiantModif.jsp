@@ -15,7 +15,7 @@
 	</ul>
 
 	<!-- Masthead Heading-->
-	<h1>Ajouter un étudiant</h1>
+	<h1>Modifier un étudiant</h1>
 	
 	
 	<div class="">
