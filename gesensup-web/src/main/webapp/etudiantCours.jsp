@@ -8,11 +8,17 @@
 <%@include file="menuhaut.jsp"%>
 
 <div class="container">
+<br/><br/><br/><br/><br/><br/>
 	<%List<Course> listCours = (List<Course>) session.getAttribute("courses");%>
 	<h1>Associé un cour a un etudiant</h1>
 	<form action="EtudiantCoursServlet" method="post">
+	<br/><br/>
 	<% Student student = (Student) session.getAttribute("student");%>
+	
 		<input type="text" id="mail" class="form-control" name="mail" value="<%=student.getMailAdresse()%>">
+		
+		<br/><br/>
+		
 	  	<select name="listeCours" class="browser-default custom-select">
 				<% 
 				        for (Course course : listCours)

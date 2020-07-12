@@ -12,7 +12,7 @@
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
-				<% if(user.getProfil().equalsIgnoreCase("responsable")) { %>
+				<% if(user.getProfil().equalsIgnoreCase("R")) { %>
 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
@@ -25,7 +25,7 @@
                 <% 
 				}
                 %>
-                <% if(user.getProfil().equalsIgnoreCase("directeur")) { %>
+                <% if(user.getProfil().equalsIgnoreCase("D")) { %>
 
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
