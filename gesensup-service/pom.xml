@@ -5,16 +5,16 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>gesEnsup</artifactId>
+		<artifactId>gesensup</artifactId>
 		<groupId>com.ensup.master</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.ensup.master</groupId>
-	<artifactId>gesEnsup-service</artifactId>
+	<artifactId>gesensup-service</artifactId>
 	<version>1.0-SNAPSHOT</version>
 
-	<name>gesEnsup-service</name>
+	<name>gesensup-service</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -46,7 +46,7 @@
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>gesEnsup-dao</artifactId>
+			<artifactId>gesensup-dao</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 

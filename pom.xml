@@ -5,10 +5,10 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.ensup.master</groupId>
-	<artifactId>gesEnsup</artifactId>
+	<artifactId>gesensup</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-	<name>gesEnsup</name>
+	<name>gesensup</name>
 
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
@@ -30,22 +30,22 @@
 
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>gesEnsup-domaine</artifactId>
+				<artifactId>gesensup-domaine</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>gesEnsup-dao</artifactId>
+				<artifactId>gesensup-dao</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>gesEnsup-service</artifactId>
+				<artifactId>gesensup-service</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>${project.groupId}</groupId>
-				<artifactId>gesEnsup-web</artifactId>
+				<artifactId>gesensup-web</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 		</dependencies>
@@ -98,9 +98,9 @@
 		</pluginManagement>
 	</build>
 	<modules>
-		<module>gesEnsup-domaine</module>
-		<module>gesEnsup-service</module>
-		<module>gesEnsup-dao</module>
-		<module>gesEnsup-web</module>
+		<module>gesensup-domaine</module>
+		<module>gesensup-service</module>
+		<module>gesensup-dao</module>
+		<module>gesensup-web</module>
 	</modules>
 </project>

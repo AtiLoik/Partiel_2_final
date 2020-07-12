@@ -4,17 +4,17 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
-		<artifactId>gesEnsup</artifactId>
+		<artifactId>gesensup</artifactId>
 		<groupId>com.ensup.master</groupId>
 		<version>1.0-SNAPSHOT</version>
 	</parent>
 
 	<groupId>com.ensup.master</groupId>
-	<artifactId>gesEnsup-web</artifactId>
+	<artifactId>gesensup-web</artifactId>
 	<version>1.0-SNAPSHOT</version>
 	<packaging>war</packaging>
 
-	<name>gesEnsup-web Maven Webapp</name>
+	<name>gesensup-web Maven Webapp</name>
 	<!-- FIXME change it to the project's website -->
 	<url>http://www.example.com</url>
 
@@ -40,12 +40,12 @@
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>gesEnsup-domaine</artifactId>
+			<artifactId>gesensup-domaine</artifactId>
 		</dependency>
 
 		<dependency>
 			<groupId>${project.groupId}</groupId>
-			<artifactId>gesEnsup-service</artifactId>
+			<artifactId>gesensup-service</artifactId>
 		</dependency>
 		
 		<dependency>
@@ -58,7 +58,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>gesEnsup-web</finalName>
+		<finalName>gesensup-web</finalName>
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
 			<plugins>
