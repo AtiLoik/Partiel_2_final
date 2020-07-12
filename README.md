@@ -42,32 +42,23 @@ Liste des prérequis:
 
 # Installation
 
-Importer le fichier sql sur PhpMyAdmin
-Démarrer Tomcat (bin/starup.bat)
-Copier la livraison dans le répertoire ‘webapps’ de tomcat
-Pour lancer le logiciel , lancer le navigateur vers :           http://localhost:8080/gesEnsup-web/
+Importer le fichier sql sur PhpMyAdmin  
+Démarrer Tomcat (bin/starup.bat)  
+Copier la livraison dans le répertoire ‘webapps’ de tomcat  
+Pour lancer le logiciel , lancer le navigateur vers : http://localhost:8080/gesEnsup-web/  
 
 # Liste des collaborateurs
 
-Benjamin
-Morgan
-Loïk
-Cédric
-Fatimata
-Lyes
-Giovanni
-Yoeko
-Kodzo
-Braham
-Mohamed
-Youcef
+Benjamin  
+Morgan  
+Loïk  
+Cédric  
+Fatimata  
+Lyes  
+Giovanni  
+Yoeko  
+Kodzo  
+Braham  
+Mohamed  
+Youcef  
 Amadou
-
-
-
-
-
- 
-
-
-
