@@ -66,11 +66,18 @@ public class AjoutEtudiantServlet extends HttpServlet {
 		session.setAttribute("student", null);
 		user = (User) session.getAttribute("user");
 		studentService.createStudent(student);
-
 		session.setAttribute("students", lister(student));
 		session.setAttribute("courses", getAllCourses());
+		if(user.getProfil().equalsIgnoreCase("directeur")) {
+			dispatcher = request.getRequestDispatcher("etudiant.jsp");
+		}
+		else {
+			dispatcher = request.getRequestDispatcher("etudiantAjout.jsp");
+
+		}
 		
-		dispatcher = request.getRequestDispatcher("etudiant.jsp");
+		
+		
 		dispatcher.forward(request, response);
 	}
 
