@@ -28,7 +28,7 @@
 		<description></description>
 		<servlet-class>servlets.SupprimerEtudiantServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet>
 		<servlet-name>ViewEtudiantServlet</servlet-name>
 		<display-name>ViewEtudiantServlet</display-name>
@@ -59,7 +59,7 @@
 		<description></description>
 		<servlet-class>servlets.EtudiantCoursServlet</servlet-class>
 	</servlet>
-	
+
 	<servlet-mapping>
 		<servlet-name>ConnexionServlet</servlet-name>
 		<url-pattern>/ConnexionServlet</url-pattern>
@@ -89,12 +89,12 @@
 		<url-pattern>/ModifEtudiantServlet</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
-<<<<<<< HEAD
 		<servlet-name>RechercheEtudiantServlet</servlet-name>
 		<url-pattern>/RechercheEtudiantServlet</url-pattern>
-=======
+	</servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>EtudiantCoursServlet</servlet-name>
 		<url-pattern>/EtudiantCoursServlet</url-pattern>
->>>>>>> fatima
+
 	</servlet-mapping>
 </web-app>

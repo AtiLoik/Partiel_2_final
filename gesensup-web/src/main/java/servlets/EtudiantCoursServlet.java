@@ -56,7 +56,7 @@ public class EtudiantCoursServlet extends HttpServlet {
 		
 		String email = request.getParameter("mail") ;
 		String course = request.getParameter("listeCours");		
-		Student student = studentService.getUser(email);
+		Student student = studentService.getStudentByEmail(email);
 		HttpSession session = request.getSession();
 		
 		System.out.println(course + " " +student.getId());

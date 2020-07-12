@@ -13,7 +13,7 @@
 	<form action="EtudiantCoursServlet" method="post">
 	<% Student student = (Student) session.getAttribute("student");%>
 		<input type="text" id="mail" class="form-control" name="mail" value="<%=student.getMailAdresse()%>">
-	  	<select name="listeCours">
+	  	<select name="listeCours" class="browser-default custom-select">
 				<% 
 				        for (Course course : listCours)
 				        {
