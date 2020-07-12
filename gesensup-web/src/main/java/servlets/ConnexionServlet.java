@@ -71,10 +71,10 @@ public class ConnexionServlet extends HttpServlet {
 		User user = userService.getUser(request.getParameter("login"), request.getParameter("password"));
 
 		// page de retour
-
+		
 		if (user != null && user.getLogin().equalsIgnoreCase(request.getParameter("login"))
 				&& user.getPassword().equalsIgnoreCase(request.getParameter("password"))) {
-
+			
 			dispatcher = request.getRequestDispatcher("home.jsp");
 			HttpSession session = request.getSession();
 			session.setAttribute("user", user);

@@ -9,9 +9,7 @@
 <div class="container">
 	<br /> <br /> <br /> <br /> <br /> <br />
 
-	<ul>
-		<li><a href="etudiant.jsp">Liste des étudiants</a></li>
-	</ul>
+	
 
 	<!-- Masthead Heading-->
 	<h1>Ajouter un étudiant</h1>
@@ -27,39 +25,39 @@
 				
 					<div class="col">
 						<div class="md-form md-outline mt-0">
-							<input type="text" id="firstName" name="firstName" class="form-control"> 
 							<label for="firstName">First Name</label>
+							<input type="text" id="firstName" name="firstName" class="form-control"> 
 						</div>
 					</div>
 					
 					<div class="col">
 						<div class="md-form md-outline mt-0">
-							<input type="text" id="lastName" name="lastName" class="form-control"> 
 							<label for="lastName">Last Name</label>
+							<input type="text" id="lastName" name="lastName" class="form-control"> 
 						</div>
 					</div>
 					
 				</div>
 
-				<div class="md-form md-outline mt-0">
-					<input type="text" id="mailAdresse" class="form-control" name="mailAdresse"> 
+				<div class="md-form md-outline mt-0">				
 					<label for="mailAdresse">Mail Adress</label>
+					<input type="text" id="mailAdresse" class="form-control" name="mailAdresse"> 
 				</div>
 				
 				
-				<div class="md-form md-outline">
-					<textarea  id="adress" class="form-control"	name="adress"></textarea>
+				<div class="md-form md-outline">	
 					<label for="adress">Address</label>
+					<textarea  id="adress" class="form-control"	name="adress"></textarea>
 				</div>
 				
 				<div class="md-form md-outline mt-0"  type ="hidden;">
-					<input type="text" id="numberPhone" name="numberPhone" class="form-control">
 					<label for="numberPhone">NumberPhone</label>
+					<input type="text" id="numberPhone" name="numberPhone" class="form-control">
 				</div>				
 				
 				<div class="md-form md-outline mt-0">
-					<input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control">
 					<label for="dateOfBirth">Birth Date - format(yyyy-mm-dd)</label>
+					<input type="date" id="dateOfBirth" name="dateOfBirth" class="form-control">
 				</div>
 			
 								

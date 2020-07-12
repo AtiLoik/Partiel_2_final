@@ -95,6 +95,5 @@
 	<servlet-mapping>
 		<servlet-name>EtudiantCoursServlet</servlet-name>
 		<url-pattern>/EtudiantCoursServlet</url-pattern>
-
 	</servlet-mapping>
 </web-app>

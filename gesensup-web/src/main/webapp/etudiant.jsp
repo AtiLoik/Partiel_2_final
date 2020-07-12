@@ -43,7 +43,6 @@
 
 	<!-- Masthead Heading-->
 	<%
-		User user = (User) session.getAttribute("user");
 		List<Student> listEtudiant = new ArrayList<Student>();
 
 		if (user.getProfil().equalsIgnoreCase("D")) {
