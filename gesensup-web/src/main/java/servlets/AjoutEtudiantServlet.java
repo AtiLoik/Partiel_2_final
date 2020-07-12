@@ -67,22 +67,20 @@ public class AjoutEtudiantServlet extends HttpServlet {
 		user = (User) session.getAttribute("user");
 		studentService.createStudent(student);
 
-		session.setAttribute("students", lister(student));
+		session.setAttribute("students", lister());
 		session.setAttribute("courses", getAllCourses());
 		
 		dispatcher = request.getRequestDispatcher("etudiant.jsp");
 		dispatcher.forward(request, response);
 	}
 
-	private List<Student> lister(Student student) {
+	private List<Student> lister() {
 
 		List<Student> students = Collections.emptyList();
 		try {
-			if(user.getProfil().equalsIgnoreCase("D")) {
+			
 			students = studentService.readAllStudent();
-			} else {
-				students.add(student);
-			}
+			
 		} catch (Exception e) {
 
 		}

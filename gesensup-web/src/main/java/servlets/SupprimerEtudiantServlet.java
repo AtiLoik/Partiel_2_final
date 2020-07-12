@@ -85,9 +85,9 @@ public class SupprimerEtudiantServlet extends HttpServlet {
 
 		List<Student> students = Collections.emptyList();
 		try {
-			if(user.getProfil().equalsIgnoreCase("D")) {
+			
 			students = studentService.readAllStudent();
-			}
+			
 		} catch (Exception e) {
 
 		}

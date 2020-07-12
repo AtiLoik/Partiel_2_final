@@ -44,9 +44,9 @@
 	<!-- Masthead Heading-->
 	<%
 		List<Student> listEtudiant = new ArrayList<Student>();
-
+		listEtudiant = (List<Student>) session.getAttribute("students");
 		if (user.getProfil().equalsIgnoreCase("D")) {
-			listEtudiant = (List<Student>) session.getAttribute("students");
+			
 		%>
 		<h1>Liste des étudiants</h1>
 		<%} else {	%>
