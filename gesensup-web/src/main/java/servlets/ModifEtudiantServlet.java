@@ -76,8 +76,7 @@ public class ModifEtudiantServlet extends HttpServlet {
 	private List<Student> lister() {
 
 		List<Student> students = Collections.emptyList();
-		try {
-			
+		try {			
 			
 			students = studentService.readAllStudent();
 			
